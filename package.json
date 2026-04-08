@@ -1,0 +1,24 @@
+{
+  "name": "GitHub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "npm": "^4.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sanchaishalu3126/secure.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Sanchaishalu3126/secure/issues"
+  },
+  "homepage": "https://github.com/Sanchaishalu3126/secure#readme"
+}
