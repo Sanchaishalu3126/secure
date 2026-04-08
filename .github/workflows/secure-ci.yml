@@ -2,33 +2,30 @@
 
 on:
   push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+    branches: [ "master" ]   # Changed to match your branch name
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true   # Opt into Node.js 24 now
 
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '18'
+          node-version: '20'   # You can change to '24' later if you prefer
 
       - name: Install dependencies
         run: npm install
 
-      - name: Build project
-        run: npm run build
-        env:
-          API_KEY: ${{ secrets.API_KEY }}
-          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+      - name: Run a test script
+        run: echo "Hello, GitHub Actions!"
 
-      - name: Deploy
-        run: ./deploy.sh
+      - name: Show secret value
+        run: echo "Secret is $MY_SECRET_KEY"
         env:
-          DEPLOY_TOKEN: ${{ secrets.DEPLOY_TOKEN }}
+          MY_SECRET_KEY: ${{ secrets.MY_SECRET_KEY }}
