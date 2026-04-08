@@ -19,8 +19,8 @@ jobs:
         with:
           node-version: '20'   # You can change to '24' later if you prefer
 
-      - name: Install dependencies
-        run: npm install
+      - name: Run a test script
+        run: echo "Hello, GitHub Actions!"
 
       - name: Run a test script
         run: echo "Hello, GitHub Actions!"
