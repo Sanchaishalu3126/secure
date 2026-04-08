@@ -2,7 +2,7 @@
 
 on:
   push:
-    branches: [ "master" ]   # Changed to match your branch name
+    branches: [ "main" ]   # Changed to match your branch name
 
 jobs:
   build:
